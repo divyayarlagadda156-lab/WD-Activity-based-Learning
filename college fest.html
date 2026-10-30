@@ -1,27 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<head> 
 <title>VIBRANCE 2026 | College Fest</title>
-
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Arial, sans-serif;    
 }
-
 body {
     background: #f8f7ff;
     color: #252044;
     line-height: 1.6;
-}
-
-/* NAVIGATION */
+} 
 header {
     background: linear-gradient(90deg, #4c1d95, #9333ea, #ec4899);
     padding: 16px 6%;
@@ -29,42 +21,30 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 15px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 4px 15px #0002;
+    gap: 15px;     
 }
-
 .logo {
     color: white;
     font-size: 27px;
     font-weight: 900;
     letter-spacing: 2px;
 }
-
 .logo span {
     color: #fde047;
 }
-
 nav {
     display: flex;
     flex-wrap: wrap;
     gap: 18px;
 }
-
 nav a {
     text-decoration: none;
     color: white;
-    font-weight: 600;
-    transition: 0.3s;
+    font-weight: 600;     
 }
-
 nav a:hover {
     color: #fde047;
-}
-
-/* HERO BANNER */
+} 
 .hero {
     min-height: 520px;
     padding: 65px 8%;
@@ -72,17 +52,12 @@ nav a:hover {
     align-items: center;
     justify-content: space-between;
     gap: 30px;
-    color: white;
-    background: linear-gradient(120deg, #312e81, #7e22ce, #db2777, #f97316);
-    background-size: 250% 250%;
-    animation: gradient 8s ease infinite;
+    color: white;    
 }
-
 .hero-content {
     max-width: 650px;
     animation: appear 1s ease;
 }
-
 .badge {
     display: inline-block;
     background: #fde047;
@@ -92,28 +67,19 @@ nav a:hover {
     font-weight: bold;
     margin-bottom: 18px;
 }
-
 .hero h1 {
     font-size: clamp(40px, 7vw, 72px);
     line-height: 1.1;
     margin-bottom: 20px;
 }
-
 .hero h1 span {
     color: #fde047;
 }
-
 .hero p {
     font-size: 19px;
     margin-bottom: 25px;
     color: #f3e8ff;
-}
-
-.hero-art {
-    font-size: clamp(100px, 17vw, 190px);
-    animation: float 3s ease-in-out infinite;
-}
-
+} 
 .btn {
     display: inline-block;
     padding: 13px 25px;
@@ -122,107 +88,68 @@ nav a:hover {
     color: #4c1d95;
     text-decoration: none;
     font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
 }
-
-.btn:hover {
-    transform: translateY(-4px);
-    background: white;
-    box-shadow: 0 8px 20px #0003;
-}
-
-/* FEST DETAILS */
-.stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+ .stats {
+    display: grid;    
     gap: 18px;
     padding: 30px 7%;
     background: white;
 }
-
 .stat {
     text-align: center;
     padding: 15px;
 }
-
 .stat h2 {
     color: #9333ea;
     font-size: 32px;
 }
-
 .stat p {
     color: #666;
 }
-
-/* COMMON SECTIONS */
-section.content-section {
-    padding: 65px 7%;
-}
-
-.section-title {
+ .section-title {
     text-align: center;
     font-size: clamp(27px, 4vw, 38px);
     color: #6d28d9;
     margin-bottom: 10px;
 }
-
 .section-subtitle {
     text-align: center;
     color: #777;
     margin-bottom: 35px;
 }
-
-/* EVENT CARDS */
-.event-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+ .event-grid {
+    display: grid;     
     gap: 25px;
 }
-
 .event-card {
     background: white;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 5px 20px #312e8110;
-    transition: 0.35s;
-    border: 1px solid #eee7ff;
-}
-
-.event-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px #9333ea25;
-}
-
-.event-banner {
+    }
+ .event-banner {
     padding: 30px 15px;
     text-align: center;
     font-size: 55px;
 }
-
 .purple { background: linear-gradient(135deg, #ddd6fe, #c084fc); }
 .pink { background: linear-gradient(135deg, #fbcfe8, #f9a8d4); }
 .orange { background: linear-gradient(135deg, #fed7aa, #fb923c); }
 .blue { background: linear-gradient(135deg, #bfdbfe, #60a5fa); }
 .green { background: linear-gradient(135deg, #bbf7d0, #4ade80); }
 .yellow { background: linear-gradient(135deg, #fef08a, #facc15); }
-
 .event-info {
     padding: 22px;
 }
-
 .event-info h3 {
     color: #6d28d9;
     margin-bottom: 10px;
     font-size: 21px;
 }
-
 .event-info p {
     color: #666;
     margin-bottom: 12px;
 }
-
 .tag {
     display: inline-block;
     background: #f3e8ff;
@@ -233,21 +160,17 @@ section.content-section {
     font-weight: bold;
     margin-bottom: 10px;
 }
-
 .event-info .btn {
     margin-top: 10px;
     background: linear-gradient(90deg, #7c3aed, #db2777);
     color: white;
     width: 100%;
     text-align: center;
-}
-
-/* SCHEDULE */
+} 
 .schedule {
     max-width: 850px;
     margin: auto;
 }
-
 .schedule-item {
     display: flex;
     align-items: center;
@@ -255,256 +178,153 @@ section.content-section {
     background: white;
     margin-bottom: 16px;
     padding: 20px;
-    border-radius: 15px;
-    border-left: 6px solid #9333ea;
-    box-shadow: 0 4px 15px #00000008;
-    transition: 0.3s;
 }
-
-.schedule-item:hover {
-    transform: translateX(5px);
-}
-
-.time {
+ .time {
     min-width: 100px;
     color: #9333ea;
     font-weight: bold;
 }
-
 .schedule-item h3 {
     color: #34215f;
 }
-
 .schedule-item p {
     color: #777;
-}
-
-/* COORDINATORS */
+} 
 .coordinator-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    display: grid;     
     gap: 22px;
 }
-
 .coordinator {
     text-align: center;
     padding: 28px 20px;
     background: white;
     border-radius: 18px;
-    box-shadow: 0 5px 20px #0000000d;
-    transition: 0.3s;
+    box-shadow: 0 5px 20px #0000000d;    
 }
-
-.coordinator:hover {
-    transform: translateY(-6px);
-}
-
-.avatar {
+ .avatar {
     width: 85px;
     height: 85px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 42px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #ddd6fe, #fbcfe8);
-    margin: 0 auto 15px;
+    border-radius: 50%;     
 }
-
 .coordinator h3 {
     color: #7e22ce;
 }
-
 .coordinator p {
     color: #777;
-}
-
-/* REGISTRATION */
+} 
 .registration {
     background: linear-gradient(135deg, #4c1d95, #9333ea, #db2777);
     color: white;
 }
-
 .registration .section-title {
     color: white;
 }
-
 .registration .section-subtitle {
     color: #f3e8ff;
 }
-
 .form-box {
     max-width: 700px;
     margin: auto;
     padding: 30px;
     background: white;
-    color: #252044;
-    border-radius: 20px;
-    box-shadow: 0 10px 35px #0002;
+    color: #252044;    
 }
-
 .form-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: grid;     
     gap: 18px;
 }
-
 .form-group {
     margin-bottom: 18px;
 }
-
 .form-group label {
     display: block;
     font-weight: 600;
     margin-bottom: 7px;
     color: #4c1d95;
 }
-
 .form-group input,
 .form-group select,
 .form-group textarea {
     width: 100%;
     padding: 13px;
     border: 1px solid #ddd6fe;
-    border-radius: 10px;
-    outline: none;
-    font-size: 15px;
-    background: #faf8ff;
+    border-radius: 10px;     
 }
-
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     border-color: #9333ea;
     box-shadow: 0 0 0 3px #9333ea15;
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-.full-width {
-    grid-column: 1 / -1;
-}
-
-.form-box .btn {
+} 
+ .form-box .btn {
     width: 100%;
     background: linear-gradient(90deg, #7c3aed, #db2777);
     color: white;
     font-size: 16px;
-}
-
-/* RULES */
+} 
 .rules-box {
     max-width: 850px;
     margin: auto;
     background: white;
     border-radius: 18px;
-    padding: 30px;
-    box-shadow: 0 5px 20px #0000000d;
+    padding: 30px;    
 }
-
 .rules-box ul {
     padding-left: 25px;
 }
-
-.rules-box li {
+    .rules-box li {
     margin-bottom: 12px;
     color: #555;
-}
-
-/* FOOTER */
+} 
 footer {
     padding: 35px 7%;
     background: #20113f;
     color: white;
     text-align: center;
 }
-
 footer h2 {
     color: #fde047;
     margin-bottom: 10px;
 }
-
 footer p {
     color: #ddd6fe;
     margin: 7px 0;
 }
-
 footer a {
     color: #f9a8d4;
     text-decoration: none;
 }
-
-/* ANIMATIONS */
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-}
-
-@keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-@keyframes appear {
-    from {
-        opacity: 0;
-        transform: translateY(25px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* MOBILE RESPONSIVENESS */
-@media (max-width: 700px) {
+  @media (max-width: 700px) {
     header {
         justify-content: center;
         text-align: center;
     }
-
     nav {
         justify-content: center;
         gap: 12px;
     }
-
     .hero {
-        text-align: center;
-        flex-direction: column;
+        text-align: center;         
         padding: 45px 6%;
     }
 
     .hero-art {
         font-size: 110px;
-    }
-
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .full-width {
-        grid-column: auto;
-    }
-
+    }  
     .schedule-item {
-        align-items: flex-start;
-        flex-direction: column;
+        align-items: flex-start;       
         gap: 5px;
     }
 }
 </style>
 </head>
-
-<body>
-
-<!-- NAVIGATION -->
+<body> 
 <header>
     <div class="logo">VIBRANCE<span> 2026</span> ✨</div>
-
     <nav>
         <a href="#home">Home</a>
         <a href="#events">Events</a>
@@ -513,62 +333,43 @@ footer a {
         <a href="#rules">Rules</a>
         <a href="#register">Register</a>
     </nav>
-</header>
-
-<!-- HERO SECTION -->
+</header> 
 <main>
 <section class="hero" id="home">
     <div class="hero-content">
         <span class="badge">🎉 THE ULTIMATE COLLEGE FEST</span>
-
         <h1>Unleash Your <span>Talent!</span></h1>
-
-        <p>
-            Experience two unforgettable days filled with technology,
-            creativity, music, dance, competitions, and celebration.
-        </p>
-
+        <p>Experience two unforgettable days filled with technology,creativity, music, dance, competitions, and celebration.        </p>
         <p>📅 20–21 November 2026 &nbsp; | &nbsp; 📍 College Campus</p>
-
         <a href="#events" class="btn">Explore Events →</a>
         <a href="#register" class="btn">Register Now ✨</a>
     </div>
-
     <div class="hero-art">🎪🎤</div>
-</section>
-
-<!-- FEST STATS -->
+</section> 
 <div class="stats">
     <div class="stat">
         <h2>20+</h2>
         <p>Exciting Events</p>
     </div>
-
     <div class="stat">
         <h2>500+</h2>
         <p>Expected Participants</p>
     </div>
-
     <div class="stat">
         <h2>10+</h2>
         <p>Expert Coordinators</p>
     </div>
-
     <div class="stat">
         <h2>2 Days</h2>
         <p>Unlimited Fun</p>
     </div>
-</div>
-
-<!-- EVENTS -->
+</div> 
 <section class="content-section" id="events">
     <h2 class="section-title">🎯 Explore Our Events</h2>
     <p class="section-subtitle">
         Choose your passion and showcase your talent!
     </p>
-
     <div class="event-grid">
-
         <article class="event-card">
             <div class="event-banner purple">💻</div>
             <div class="event-info">
@@ -580,7 +381,6 @@ footer a {
                 <a href="#register" class="btn">Register</a>
             </div>
         </article>
-
         <article class="event-card">
             <div class="event-banner pink">💃</div>
             <div class="event-info">
@@ -592,7 +392,6 @@ footer a {
                 <a href="#register" class="btn">Register</a>
             </div>
         </article>
-
         <article class="event-card">
             <div class="event-banner orange">🎤</div>
             <div class="event-info">
@@ -604,7 +403,6 @@ footer a {
                 <a href="#register" class="btn">Register</a>
             </div>
         </article>
-
         <article class="event-card">
             <div class="event-banner blue">🤖</div>
             <div class="event-info">
@@ -616,7 +414,6 @@ footer a {
                 <a href="#register" class="btn">Register</a>
             </div>
         </article>
-
         <article class="event-card">
             <div class="event-banner green">📸</div>
             <div class="event-info">
@@ -628,7 +425,6 @@ footer a {
                 <a href="#register" class="btn">Register</a>
             </div>
         </article>
-
         <article class="event-card">
             <div class="event-banner yellow">🧠</div>
             <div class="event-info">
@@ -640,21 +436,15 @@ footer a {
                 <a href="#register" class="btn">Register</a>
             </div>
         </article>
-
     </div>
-</section>
-
-<!-- SCHEDULE -->
+</section> 
 <section class="content-section" id="schedule"
          style="background:#f0eaff;">
-
     <h2 class="section-title">🗓️ Event Schedule</h2>
     <p class="section-subtitle">
         Plan your day and never miss your favorite event.
     </p>
-
     <div class="schedule">
-
         <div class="schedule-item">
             <div class="time">09:00 AM</div>
             <div>
@@ -662,7 +452,6 @@ footer a {
                 <p>Welcome address and inauguration of the fest.</p>
             </div>
         </div>
-
         <div class="schedule-item">
             <div class="time">10:00 AM</div>
             <div>
@@ -670,7 +459,6 @@ footer a {
                 <p>Coding contests, robotics, and technical challenges.</p>
             </div>
         </div>
-
         <div class="schedule-item">
             <div class="time">12:00 PM</div>
             <div>
@@ -678,7 +466,6 @@ footer a {
                 <p>Dance, music, and creative performances.</p>
             </div>
         </div>
-
         <div class="schedule-item">
             <div class="time">02:00 PM</div>
             <div>
@@ -686,7 +473,6 @@ footer a {
                 <p>Hands-on learning and interactive sessions.</p>
             </div>
         </div>
-
         <div class="schedule-item">
             <div class="time">04:00 PM</div>
             <div>
@@ -694,82 +480,65 @@ footer a {
                 <p>Celebrate winners and outstanding performances.</p>
             </div>
         </div>
-
     </div>
-</section>
-
-<!-- COORDINATORS -->
+</section> 
 <section class="content-section" id="team">
     <h2 class="section-title">👥 Meet Our Coordinators</h2>
     <p class="section-subtitle">
         The team making the festival memorable.
     </p>
-
     <div class="coordinator-grid">
-
         <div class="coordinator">
             <div class="avatar">👨‍💻</div>
             <h3>Arjun Kumar</h3>
             <p>Technical Events Coordinator</p>
             <p>📧 tech@example.com</p>
         </div>
-
         <div class="coordinator">
             <div class="avatar">👩‍🎤</div>
             <h3>Priya Sharma</h3>
             <p>Cultural Events Coordinator</p>
             <p>📧 culture@example.com</p>
         </div>
-
         <div class="coordinator">
             <div class="avatar">👨‍🏫</div>
             <h3>Rahul Reddy</h3>
             <p>Workshop Coordinator</p>
             <p>📧 workshops@example.com</p>
         </div>
-
     </div>
-</section>
-
-<!-- REGISTRATION -->
+</section> 
 <section class="content-section registration" id="register">
     <h2 class="section-title">📝 Fest Registration</h2>
     <p class="section-subtitle">
         Join the celebration! Fill in your details below.
     </p>
-
     <form class="form-box"
           action="mailto:fest@example.com"
           method="post"
           enctype="text/plain">
-
         <div class="form-grid">
-
             <div class="form-group">
                 <label for="name">Full Name</label>
                 <input id="name" type="text" name="Full Name"
                        placeholder="Enter your name" required>
             </div>
-
             <div class="form-group">
                 <label for="email">Email Address</label>
                 <input id="email" type="email" name="Email"
                        placeholder="Enter your email" required>
             </div>
-
             <div class="form-group">
                 <label for="college">College Name</label>
                 <input id="college" type="text" name="College"
                        placeholder="Enter your college" required>
             </div>
-
             <div class="form-group">
                 <label for="phone">Phone Number</label>
                 <input id="phone" type="tel" name="Phone"
                        placeholder="Enter your phone number"
                        pattern="[0-9]{10}" required>
             </div>
-
             <div class="form-group full-width">
                 <label for="event">Choose Your Event</label>
                 <select id="event" name="Selected Event" required>
@@ -782,29 +551,22 @@ footer a {
                     <option>AI Innovation Lab</option>
                 </select>
             </div>
-
             <div class="form-group full-width">
                 <label for="message">Why do you want to participate?</label>
                 <textarea id="message" name="Message"
                           placeholder="Tell us about your interests..."></textarea>
             </div>
-
-        </div>
-
+            </div>
         <button type="submit" class="btn">
             Submit Registration 🚀
         </button>
-
     </form>
 </section>
-
-<!-- RULES -->
 <section class="content-section" id="rules">
     <h2 class="section-title">📜 Festival Rules</h2>
     <p class="section-subtitle">
         Follow these guidelines for a safe and enjoyable fest.
     </p>
-
     <div class="rules-box">
         <ul>
             <li>Students must carry their valid college ID cards.</li>
@@ -817,10 +579,7 @@ footer a {
         </ul>
     </div>
 </section>
-
 </main>
-
-<!-- FOOTER -->
 <footer>
     <h2>VIBRANCE 2026 ✨</h2>
     <p>Where Talent Meets Celebration!</p>
@@ -832,6 +591,5 @@ footer a {
     </p>
     <p>© 2026 VIBRANCE College Fest. All rights reserved.</p>
 </footer>
-
 </body>
 </html>
